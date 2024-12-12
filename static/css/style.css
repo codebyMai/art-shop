@@ -1,0 +1,29 @@
+/* navbar styles */
+
+.navbar-brand img {
+    width: 350px
+}
+.navbar-brand{
+    border-bottom: 2px solid #2d3232;
+}
+.navbar .navbar-nav .nav-item{
+    padding: .5em 2em;
+}
+.navbar .navbar-nav .nav-link{
+    color: #434c4c;
+    font-size: 1.3em;
+}
+@media screen and (max-width: 576px) {
+    .navbar-brand img {
+        width: 200px
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar .container-fluid{
+        flex-direction: column;
+    }
+} 
+
+
+
+
