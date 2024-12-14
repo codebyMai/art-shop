@@ -1,5 +1,7 @@
 /* navbar styles */
-
+.bg-body-tertiary {
+    background-color: white !important;
+}
 .navbar-brand img {
     width: 350px
 }
