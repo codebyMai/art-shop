@@ -5,9 +5,6 @@
 .navbar-brand img {
     width: 350px
 }
-.navbar-brand{
-    border-bottom: 2px solid #2d3232;
-}
 .navbar .navbar-nav .nav-item{
     padding: .5em 2em;
 }
@@ -21,10 +18,16 @@
     }
 }
 @media screen and (min-width: 992px) {
+    .navbar-brand {
+        border-bottom: 2px solid #2d3232;
+    }
+}
+@media screen and (min-width: 992px) {
     .navbar .container-fluid{
         flex-direction: column;
     }
-} 
+}
+
 
 
 

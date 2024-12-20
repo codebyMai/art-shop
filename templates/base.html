@@ -17,9 +17,14 @@
   <body>
     {% include 'includes/header.html' %}
     <main>
+      
+      {% if messages %}
+      <div class="message-container"></div>
+      {% endif %}
       <div>
       {% block content %}
 
+  
       {% endblock %}
       </div>
     </main>
