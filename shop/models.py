@@ -18,7 +18,7 @@ class Product(models.Model):
         ('St', 'Still life'),
         ('Fl', 'Flowers'),
     )
-    category = models.CharField(choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES )
     posted_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
