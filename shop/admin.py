@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
         'title',
         'width',
         'height',
-        'category',
         'image',
+        'subject',
+        'type',
     )
