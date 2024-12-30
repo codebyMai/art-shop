@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+{% include 'includes/shopheader.html' %}
+{% endblock %}
+{% if messages %}
+      <div class="message-container"></div>
+{% endif %}
+<body>
+    {% include 'includes/shopheader.html' %}
+    <main>
+        <h1>fnsdgbsdlfbg</h1>
+        <p><img src={{product.image}} class="img-fluid" alt={{product.image_alt}}></p>
+        <div>{{product.title}}</div>
+        <div>{{product.width}}mm X {{product.height}}mm</div>
+        <div>€ {{product.price}}</div>
+        <div>{{product.description}}</div>
+        

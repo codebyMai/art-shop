@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+{% include 'includes/shopheader.html' %}
+{% endblock %}
+{% if messages %}
+      <div class="message-container"></div>
+{% endif %}
+{% block content %}
+
+<h1>rgwerhw</h1>
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Available art</h2>
+                <hr class="w-50 mb-1">
+                
+            </div>
+        </div>
+        <div class="row product-grid">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-md-3 col-sm-6">
+                            <div class="img-container">
+                                <a href="">
+                                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.image_alt }}">
+                                    <div class="overlay"> 
+                                        <span>"{{ product.title }}</span>
+                                    </div>    
+                                </a>
+                            </div>    
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Details"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <a class="add-to-cart" href="">Add to cart</a>
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.title }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}      
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

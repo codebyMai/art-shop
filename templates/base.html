@@ -15,7 +15,8 @@
     <title>Maria Zawilska Art{% block title %}{% endblock %}</title>
 </head>
   <body>
-    {% include 'includes/header.html' %}
+    {% block header %}
+    {% endblock %}
     <main>
       {% block content %}
 
