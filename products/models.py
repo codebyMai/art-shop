@@ -8,7 +8,7 @@ class Product(models.Model):
     description = models.TextField()
     width = models.IntegerField()
     height = models.IntegerField()
-    image = models.ImageField(upload_to = 'static/images/products', null=True)
+    image = models.ImageField(upload_to = 'static/images', null=True)
     image_alt = models.CharField(max_length=100, null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     SUBJECT_CHOICES = (
