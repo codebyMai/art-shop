@@ -1,3 +1,12 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* general styles */
+body {
+    font-family: 'Nunito Sans', sans-serif;;
+    color: #2d3232;
+}
+
 /* navbar styles */
 .bg-body-tertiary {
     background-color: white !important;
@@ -26,5 +35,22 @@
     .navbar .container-fluid{
         flex-direction: column;
     }
+}
+
+/* products */
+.card-body {
+    text-align: center;
+    font-size: 16px;
+}
+.icons{
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    font-size: 110%;
+}
+.icons i {
+    color:#2d3232;
+    text-align: center;
+    padding-right: 30px;
 }
 
