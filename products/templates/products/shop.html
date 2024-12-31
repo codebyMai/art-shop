@@ -8,16 +8,13 @@
 {% endif %}
 {% block content %}
 <div class=" row justify-content-center">
-  
     <div class="card text-center " style="width: 50rem;">
-    <img class="card-img-top img-fluid" src='{{ product.image.url }}'>
-       <div class="card-body">
-      <h5 class="card-title">{{product.title}}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">See Miniatures</a>
-
+        <img class="card-img-top" src={{product.image.url}}>
+        <div class="card-body">
+           <h5 class="card-title">{{product.title}}</h5>
+           <p class="card-text">Miniature oil paintings are a great way to add art to the decor without committing a lot of space.</p>
+        <a href="#" class="btn btn-primary">Shop Miniatures</a>
     </div>
-    {% endfor %}
 </div>
 
 {% endblock %}

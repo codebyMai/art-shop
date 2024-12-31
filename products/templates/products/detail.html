@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block header %}
 {% include 'includes/shopheader.html' %}
 {% endblock %}
+
 {% if messages %}
       <div class="message-container"></div>
 {% endif %}
+
+{% block content %}
 <body>
-    {% include 'includes/shopheader.html' %}
     <main>
-        <h1>fnsdgbsdlfbg</h1>
-        <p><img src={{product.image}} class="img-fluid" alt={{product.image_alt}}></p>
-        <div>{{product.title}}</div>
-        <div>{{product.width}}mm X {{product.height}}mm</div>
-        <div>€ {{product.price}}</div>
-        <div>{{product.description}}</div>
-        
+        <div class="row justify-content-center">
+            <div class="card " style="width: 40rem;" >
+                <div class="detail-img">
+                    <img class="card-img-top" src={{product.image.url}}>
+                </div>    
+                <div class="card-body detail">
+                    <p class="detail-title">{{product.title}}</p>
+                    <p>{{product.width}}mm X {{product.height}}mm</p>
+                    <p class="card-price">€ {{product.price}}</p>
+                    <p>{{product.description}}</div>
+                </div>
+            </div>
+        </div>
+    </main>      
+{% endblock %}

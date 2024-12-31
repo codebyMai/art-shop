@@ -6,8 +6,12 @@ body {
     font-family: 'Nunito Sans', sans-serif;;
     color: #2d3232;
 }
+nav {
+    padding-bottom: 20px !important;
+}
 
 /* navbar styles */
+
 .bg-body-tertiary {
     background-color: white !important;
 }
@@ -38,6 +42,9 @@ body {
 }
 
 /* products */
+.product-cards {
+    margin: 10px;
+}
 .card-body {
     text-align: center;
     font-size: 16px;
@@ -52,5 +59,13 @@ body {
     color:#2d3232;
     text-align: center;
     padding-right: 30px;
+}
+
+/* product detail */
+.detail-img {
+    padding-top: 10px;
+}
+.detail-title {
+    font-weight: bold;
 }
 
