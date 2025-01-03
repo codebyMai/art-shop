@@ -10,9 +10,13 @@
 {% endif %}
 
 {% block content %}
+
 <div class="container-fluid">
     <div class="row">
-    {% for product in products %}
+        <h4 class="type-title" id="miniatures">Available Miniatures</h4>
+            
+        {% for product in products %}
+        {% if product.is_miniature %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card product-cards" >
                 <img class="card-img-top" src={{product.image.url}}>
@@ -27,9 +31,30 @@
                 </div>
             </div> 
         </div>
-   
+        
+        <div class="row">
+        <h4 class="type-title">Available Paintings</h4>        
+        {% else %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card product-cards" >
+                <img class="card-img-top" src={{product.image.url}}>
+                <div class="card-body">
+                    <p class="card-title">{{product.title}}</p>   
+                    <p class="card-price">€ {{product.price}}</p>
+                        <ul class="icons">
+                            <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                </div>
+            </div> 
+        </div>
+        {% endif %}
+        
+
 
     {% endfor %} 
     </div>
-</div>   
+</div>
+
 {% endblock %}

@@ -9,19 +9,22 @@ body {
 nav {
     padding-bottom: 20px !important;
 }
+.btn-light {
+    padding: 5px;
+    box-shadow: 5px 10px 8px #888888;
+}
 
 /* navbar styles */
-
 .bg-body-tertiary {
     background-color: white !important;
 }
 .navbar-brand img {
     width: 350px
 }
-.navbar .navbar-nav .nav-item{
+.navbar .navbar-nav .nav-item {
     padding: .5em 2em;
 }
-.navbar .navbar-nav .nav-link{
+.navbar .navbar-nav .nav-link {
     color: #434c4c;
     font-size: 1.3em;
 }
@@ -68,4 +71,8 @@ nav {
 .detail-title {
     font-weight: bold;
 }
-
+/* shop */
+.shop-painting {
+    width: 100%;
+    padding: 0 20px 40px;
+}

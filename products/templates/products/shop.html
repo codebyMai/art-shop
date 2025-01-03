@@ -1,19 +1,73 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block header %}
 {% include 'includes/shopheader.html' %}
 {% endblock %}
+
 {% if messages %}
       <div class="message-container"></div>
 {% endif %}
+
 {% block content %}
+<div class="row justify-content-center">   
+    <div class="col">
+        <img class="shop-painting"class="img-fluid" src="{% static 'images/whiteorchid.webp' %}">
+    </div>
+    <div class="col">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/kettle.webp' %}">
+    </div>
+    <div class="col">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/pinkorchid.webp' %}">
+    </div>
+</div>
 <div class=" row justify-content-center">
-    <div class="card text-center " style="width: 50rem;">
-        <img class="card-img-top" src={{product.image.url}}>
+    <div class="card text-center " style="width: 90rem;">
+        <img class="card-img-top" src="{{product.image.url}}"">
         <div class="card-body">
-           <h5 class="card-title">{{product.title}}</h5>
-           <p class="card-text">Miniature oil paintings are a great way to add art to the decor without committing a lot of space.</p>
-        <a href="#" class="btn btn-primary">Shop Miniatures</a>
+           <p class="card-text">Miniature oil paintings offer a unique way to bring beauty 
+            and elegance into your home. These small, yet stunning works of art capture the 
+            delicate details and rich textures of larger paintings but on a more intimate scale. 
+            Whether it's a vibrant landscape or an exquisite flower, 
+            miniature oil paintings allow you to enjoy the fine craftsmanship of traditional 
+            oil painting in a space-saving form. Perfect for adding a touch of class to any room, 
+            these miniature masterpieces make thoughtful gifts or timeless keepsakes. 
+            Their compact size and intricate details make them a perfect addition to any collection, 
+            providing beauty, tranquility, and a personal touch to your living space. 
+            Invest in a miniature oil painting today and experience the magic of art in the palm of your hand.</p>
+        <a class="btn btn-light" href="{% url 'products' %}">Shop Miniatures</a>
+    </div>
+</div>
+<div class="row justify-content-center">   
+    <div class="col">
+        <img class="shop-painting"class="img-fluid" src="{% static 'images/whiteorchid.webp' %}">
+    </div>
+    <div class="col">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/kettle.webp' %}">
+    </div>
+    <div class="col">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/pinkorchid.webp' %}">
+    </div>
+</div>
+<div class=" row justify-content-center">
+    <div class="card text-center " style="width: 90rem;">
+        <img class="card-img-top" src="{{product.image.url}}"">
+        <div class="card-body">
+           <p class="card-text">Investing in an oil painting is more than just acquiring 
+            a piece of art—it's bringing timeless beauty, depth, and character into your home. 
+            Oil paintings offer a richness and texture that no other medium can match, 
+            with every brushstroke adding layers of emotion and story. 
+            Whether you are drawn to stunning landscapes, or intimate still lifes,
+            each oil painting is a unique expression of the artist's vision, 
+            carefully crafted to stand the test of time. 
+            These paintings don't just fill a space; they transform it, 
+            adding warmth, sophistication, and a personal touch to any room. 
+            Whether you're starting a collection or adding to one, 
+            an oil painting is an investment that will continue to appreciate 
+            in value, becoming a cherished piece for years to come. 
+            Bring home a masterpiece today and let art enhance the beauty of your surroundings.</p>
+        </div>
+        <a class="btn btn-light" href="{% url 'products' %}">Shop Paintings</a>
     </div>
 </div>
 
