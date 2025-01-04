@@ -9,25 +9,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <div class="navbar-nav nav-justified">
           {% if request.user.is_superuser %}
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Admin</a>
-          </li>
+            <a class="nav-link" a href="">Admin</a>
           {% endif %}
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'shop' %}">Shop</a>
-          </li>
-        </ul>
+          <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+          <a class="nav-link" href="">About</a>  
+          <a class="nav-link" href="">Gallery</a>
+          <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+        </div>  
       </div>
     </div>
   </nav>

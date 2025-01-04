@@ -21,12 +21,13 @@ nav {
 .navbar-brand img {
     width: 350px
 }
-.navbar .navbar-nav .nav-item {
-    padding: .5em 2em;
-}
-.navbar .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: #434c4c;
     font-size: 1.3em;
+    padding: .5em 5em;
+
+    margin: 0px 40px;
+    
 }
 @media screen and (max-width: 576px) {
     .navbar-brand img {
@@ -42,6 +43,18 @@ nav {
     .navbar .container-fluid{
         flex-direction: column;
     }
+}
+
+/* shop */
+.hero {
+    padding-bottom: 20px ;
+}
+.bag {
+    color:#2d3232; 
+}
+.shop-painting {
+    width: 100%;
+    padding: 0 20px 40px;
 }
 
 /* products */
@@ -71,8 +84,4 @@ nav {
 .detail-title {
     font-weight: bold;
 }
-/* shop */
-.shop-painting {
-    width: 100%;
-    padding: 0 20px 40px;
-}
+

@@ -8,30 +8,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <div class="hero">
-          <img src="{% static 'images/hero.webp' %}" class="img-fluid" alt="Painting of water lilies">
-        </div>
-    
-    
-    <div class="row">
-    
-      <div class="col">
-        <img src="{% static 'images/....webp' %}" class="img-fluid" alt="...">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="hero">
+        <img src="{% static 'images/hero.webp' %}" class="img-fluid" alt="Painting of water lilies">
       </div>
-        <a class="btn btn-light" href="#miniatures">Shop</a>
-    </div>
-    <br>
-    <h4>Paintings</h4>
-    <div class="row">
-      <div class="col">
-        <img src="{% static 'images/....webp' %}" class="img-fluid" alt="...">
-      </div>
-      <div>
-        <a href="#miniatures" class="btn btn-light">Shop Miniatures</a>
-      </div>  
     </div>
   </div>
+</div>
+<div class="container d-flex justify-content-evenly ">
+  <div class="row">   
+    <div class="col">
+      <a class="btn btn-light btn-lg" href=""> About the Artist</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-light btn-lg" href="">Visit Gallery</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-light btn-lg" href="{% url 'products' %}">Visit Shop</a>
+    </div>
+  </div>
+</div>
 {% endblock %}
