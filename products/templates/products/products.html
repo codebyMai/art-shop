@@ -13,8 +13,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <h4 class="type-title" id="miniatures">Available Miniatures</h4>
-            
+        <h3 class="products-title d-flex justify-content-center" >Available Art</h3>
+        <hr>
+          <h4 class="type-title d-flex justify-content-center">Miniatures</h4>  
         {% for product in products %}
         {% if product.is_miniature %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -25,15 +26,15 @@
                     <p class="card-price">€ {{product.price}}</p>
                         <ul class="icons">
                             <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                
                         </ul>
                 </div>
             </div> 
         </div>
         
         <div class="row">
-        <h4 class="type-title">Available Paintings</h4>        
+            <hr>
+        <h4 class="type-title d-flex justify-content-center">Paintings</h4>        
         {% else %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card product-cards" >
@@ -43,8 +44,7 @@
                     <p class="card-price">€ {{product.price}}</p>
                         <ul class="icons">
                             <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        
                         </ul>
                 </div>
             </div> 
