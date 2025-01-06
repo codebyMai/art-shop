@@ -148,4 +148,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+FREE_DELIVERY_THRESHOLD = 500
 STANDARD_DELIVERY_PERCENTAGE = 10
