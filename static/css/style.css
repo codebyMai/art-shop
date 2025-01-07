@@ -29,22 +29,6 @@ nav {
     margin: 0px 40px;
     
 }
-@media screen and (max-width: 576px) {
-    .navbar-brand img {
-        width: 200px
-    }
-}
-@media screen and (min-width: 992px) {
-    .navbar-brand {
-        border-bottom: 2px solid #2d3232;
-    }
-}
-@media screen and (min-width: 992px) {
-    .navbar .container-fluid{
-        flex-direction: column;
-    }
-}
-
 /* shop */
 .hero {
     padding-bottom: 20px ;
@@ -81,3 +65,37 @@ nav {
     padding-right: 30px;
     font-size: 120%;
 }
+
+/* toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+@media screen and (max-width: 576px) {
+    .navbar-brand img {
+        width: 200px
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar-brand {
+        border-bottom: 2px solid #2d3232;
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar .container-fluid{
+        flex-direction: column;
+    }
+}
+
+
