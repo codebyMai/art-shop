@@ -12,30 +12,32 @@
 {% block content %}
 
 <div class="container-fluid">
+   
     <div class="row">
         <h3 class="products-title d-flex justify-content-center" >Available Art</h3>
         <hr>
-          <h4 class="type-title d-flex justify-content-center">Miniatures</h4>  
-        {% for product in products %}
-        {% if product.is_miniature %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card product-cards" >
+        {% for product in products %} 
+        <h4 class="type-title d-flex justify-content-center">Miniatures</h4>  
+        
+          {% for miniature in products %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <div class="card product-cards" >
                 <img class="card-img-top" src={{product.image.url}}>
                 <div class="card-body">
-                    <p class="card-title">{{product.title}}</p>   
-                    <p class="card-price">€ {{product.price}}</p>
-                        <ul class="icons">
-                            <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
-                
-                        </ul>
+                  <p class="card-title">{{product.title}}</p>   
+                  <p class="card-price">€ {{product.price}}</p>
+                    <ul class="icons">
+                      <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
+                    </ul>
                 </div>
-            </div> 
-        </div>
-        
+              </div> 
+            </div>
+          {% endfor %}
+
         <div class="row">
             <hr>
         <h4 class="type-title d-flex justify-content-center">Paintings</h4>        
-        {% else %}
+        
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card product-cards" >
                 <img class="card-img-top" src={{product.image.url}}>
@@ -49,11 +51,7 @@
                 </div>
             </div> 
         </div>
-        {% endif %}
-        
-
-
-    {% endfor %} 
+        {% endfor %} 
     </div>
 </div>
 
