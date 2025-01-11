@@ -23,7 +23,7 @@ class Product(models.Model):
     is_featured=models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-added']
+        ordering = ['-is_miniature']
 
     def __str__(self):
         return self.title
