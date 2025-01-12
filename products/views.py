@@ -7,8 +7,7 @@ class Shop(ListView):
     template_name = "products/shop.html"
     model = Product
     context_object_name = 'products'
-    paginate_by = 4
-
+    
 class Products(ListView):
     """List of products view"""
     template_name = "products/products.html"

@@ -25,9 +25,9 @@
                 <div class="card-body">
                   <p class="card-title">{{product.title}}</p>   
                   <p class="card-price">€ {{product.price}}</p>
-                    <ul class="icons">
-                      <li><a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a></li>
-                    </ul>
+                    <div class="icon">
+                      <a href="{% url 'detail' product.pk %}"><i class="fa fa-eye"></i></a>
+                    </div>
                 </div>
               </div> 
             </div>

@@ -49,7 +49,11 @@ nav {
     text-align: center;
     font-size: 16px;
 }
-
+.fa fa-eye {
+    color:#2d3232;
+    text-align: center;
+    font-size: 120%; 
+}
 
 /* product detail */
 .detail-img {
@@ -58,7 +62,6 @@ nav {
 .detail-title {
     font-weight: bold;
 }
-
 .fa-shopping-bag {
     color:#2d3232;
     text-align: center;
