@@ -29,13 +29,17 @@ nav {
     color: #434c4c;
     font-size: 1.3em;
     padding: .5em 5em;
-    margin: 0px 40px;
-    
+    margin: 0px 40px;  
 }
 
 /* index */  
 .hero {
     padding-bottom: 20px ;
+}
+
+/* about */
+.about {
+    margin: 0 20px;
 }
 
 /* shop */
