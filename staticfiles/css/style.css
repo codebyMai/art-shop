@@ -1,0 +1,104 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* general styles */
+body {
+    font-family: 'Nunito Sans', sans-serif;;
+    color: #2d3232;
+}
+nav {
+    padding-bottom: 20px !important;
+}
+.btn-light {
+    padding: 5px;
+    box-shadow: 10px #888888;
+}
+
+/* navbar styles */
+.bg-body-tertiary {
+    background-color: white !important;
+}
+.navbar-brand img {
+    width: 350px
+}
+.navbar-nav .nav-link {
+    color: #434c4c;
+    font-size: 1.3em;
+    padding: .5em 5em;
+
+    margin: 0px 40px;
+    
+}
+/* shop */
+.hero {
+    padding-bottom: 20px ;
+}
+.bag {
+    color:#2d3232; 
+}
+.shop-painting {
+    width: 100%;
+    padding: 0 20px 40px;
+}
+
+/* products */
+.product-cards {
+    margin: 10px;
+}
+.card-body {
+    text-align: center;
+    font-size: 16px;
+}
+.fa fa-eye {
+    color:#2d3232;
+    text-align: center;
+    font-size: 120%; 
+}
+
+/* product detail */
+.detail-img {
+    padding-top: 10px;
+}
+.detail-title {
+    font-weight: bold;
+}
+.fa-shopping-bag {
+    color:#2d3232;
+    text-align: center;
+    padding-right: 30px;
+    font-size: 120%;
+}
+
+/* toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+@media screen and (max-width: 576px) {
+    .navbar-brand img {
+        width: 200px
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar-brand {
+        border-bottom: 2px solid #2d3232;
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar .container-fluid{
+        flex-direction: column;
+    }
+}
+
+

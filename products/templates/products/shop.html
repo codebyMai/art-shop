@@ -10,18 +10,17 @@
 {% block content %}
 <div class="row justify-content-center">   
     <div class="col">
-        <img class="shop-painting"class="img-fluid" src="{% static 'images/whiteorchid.webp' %}">
+        <img class="shop-painting"class="img-fluid" src="{% static 'images/fastnet.webp' %}">
     </div>
     <div class="col">
-        <img class="shop-painting" class="img-fluid" src="{% static 'images/kettle.webp' %}">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/rock.webp' %}">
     </div>
     <div class="col">
-        <img class="shop-painting" class="img-fluid" src="{% static 'images/pinkorchid.webp' %}">
+        <img class="shop-painting" class="img-fluid" src="{% static 'images/croaghpatrick.webp' %}">
     </div>
 </div>
 <div class=" row justify-content-center">
     <div class="card text-center " style="width: 90rem;">
-        <img class="card-img-top" src="{{product.image.url}}"">
         <div class="card-body">
            <p class="card-text">Miniature oil paintings offer a unique way to bring beauty 
             and elegance into your home. These small, yet stunning works of art capture the 
@@ -33,7 +32,8 @@
             Their compact size and intricate details make them a perfect addition to any collection, 
             providing beauty, tranquility, and a personal touch to your living space. 
             Invest in a miniature oil painting today and experience the magic of art in the palm of your hand.</p>
-        <a class="btn btn-light" href="{% url 'products' %}">Shop Miniatures</a>
+        </div>    
+        <a class="btn btn-light btn-lg" href="{% url 'products' %}">Shop Miniatures</a>
     </div>
 </div>
 <div class="row justify-content-center">   
@@ -49,7 +49,6 @@
 </div>
 <div class=" row justify-content-center">
     <div class="card text-center " style="width: 90rem;">
-        <img class="card-img-top" src="{{product.image.url}}"">
         <div class="card-body">
            <p class="card-text">Investing in an oil painting is more than just acquiring 
             a piece of art—it's bringing timeless beauty, depth, and character into your home. 
@@ -65,8 +64,7 @@
             in value, becoming a cherished piece for years to come. 
             Bring home a masterpiece today and let art enhance the beauty of your surroundings.</p>
         </div>
-        <a class="btn btn-light" href="{% url 'products' %}">Shop Paintings</a>
+        <a class="btn btn-light btn-lg" href="{% url 'products' %}">Shop Paintings</a>
     </div>
 </div>
-
 {% endblock %}

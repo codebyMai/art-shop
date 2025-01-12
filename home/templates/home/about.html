@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About{% endblock %} 
+
+{% block header %}
+{% include 'includes/header.html' %}
+{% endblock %}
+
+{% block content %}
+ <!--main content-->
+ <main>
+    <section>
+        <div class="card mb-3 about" >
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="{% static 'images/general/studio1.webp' %}" class="img-fluid rounded-start" alt="Photo of artist's studio">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title">About the Artist</h5>
+                        <p class="card-text">Maria Zawilska is a highly skilled oil painter with over 30 years of experience in the world of fine art.
+                        Throughout her extensive career, she has developed a unique artistic voice, blending classical techniques with 
+                        a modern sensibility. Her works often explore themes of human emotion, nature, and the delicate interplay between 
+                        light and shadow. Maria’s mastery of oil painting allows her to create rich textures and vivid color palettes 
+                        that bring depth and life to her subjects.</p>
+                        <p>Her commitment to her craft has earned her recognition in both national and international art circles, 
+                        with her pieces being displayed in galleries and exhibitions across the globe. With a deep understanding 
+                        of the tradition of oil painting, Maria Zawilska continues to evolve as an artist, producing compelling, 
+                        thought-provoking works that resonate with audiences worldwide. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="card mb-3 about">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <p class="card-text">Maria Zawilska’s technique as a traditional oil painter is deeply rooted in the classical methods of painting, 
+                        which she has honed and refined over her 30-year career. Her work focuses primarily on detailed landscapes and 
+                        still lifes, where her expertise in capturing natural light, texture, and intricate detail is evident.
+
+                        For her landscapes, Maria typically begins by observing her surroundings, either painting en plein air or 
+                        using photographs as references. She meticulously studies the interplay of light, atmosphere, and natural elements, 
+                        translating them into her compositions with a careful layering process. She applies thin layers of oil paint, 
+                        gradually building up depth and richness. Using the glazing technique, she creates transparent layers that allow 
+                        the light to penetrate and reflect through, enhancing the sense of luminosity and realism in her work.
+                        
+                    In her still life paintings, Maria is known for her precision and attention to minute details. 
+                    She arranges everyday objects—often flowers, fruits, or vases—with great care, capturing the subtleties
+                     of texture, light, and shadow. She employs fine brushwork to depict delicate surfaces, whether it’s the 
+                     glossy sheen of a fruit, the soft petals of a flower, or the reflective quality of glass or metal.</p>
+                        
+                    Throughout her practice, Maria remains true to the traditional approach of using an underpainting to establish
+                    values and tones, then gradually building up color and detail. Her final layers emphasize highlights and small 
+                    details, lending her paintings a luminous, almost lifelike quality. Her careful blending and attention to 
+                    texture give her works an immersive, three-dimensional quality that draws viewers into the scene.
+                        
+                    Maria Zawilska’s traditional oil painting technique reflects her deep understanding of both the medium and 
+                    the subjects she paints. Her landscapes and still lifes are not only skillfully rendered but also infused 
+                    with a sense of timeless beauty and reverence for the natural world.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/general/studio3.webp' %}" class="img-fluid rounded-start" alt="Photo of artist's materials">
+                </div>
+            </div>
+        </div>
+    </section>   
+</main>
+{% endblock %}

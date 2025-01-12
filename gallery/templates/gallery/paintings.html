@@ -1,53 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}-Gallery{% endblock %} 
+{% block title %}Gallery{% endblock %} 
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'gallery/gallery.css' %}">
+{% endblock %}
 
 {% block header %}
 {% include 'includes/header.html' %}
 {% endblock %}
 
 {% block content %}
-
-
- <!-- Images used to open the lightbox -->
- <div class="row">
-    {% for painting in paintings %}
-    <div class="column">
-      <img src="{{ painting.image.url }}" onclick="openModal();currentSlide(1)" class="hover-shadow">
-    </div>
+<div class="row">
+    {% for painting in gallery %}
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="gallery" >
+          <img class="col-md-auto paintings" src={{painting.image.url}}>
+        </div>  
+          <div class="justify-content-center title"><p >{{painting.title}} {{painting.year}}</p></div>    
+      </div>  
     {% endfor %}
- </div>
- <!-- The Modal/Lightbox -->
- <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-    {% for painting in paintings %}
-    <div class="mySlides">
-    <div class="numbertext"> {{ forloop.counter }} / {{ painting.image.count }} </div>
-    <img src="{{ painting.image.url }}" style="width:100%">
-    {% endfor %}
- </div>
-  <!-- Next/previous controls -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Caption text -->
-  <div class="caption-container">
-    <p id="caption">{{ painting.title }}{{ painting.year}}</p>
-  </div>
-
-  <!-- Thumbnail image controls -->
-{% for painting in paintings %}
-  <div class="column">
-    <img class="demo" src="{{ painting.image.url }}" ,onclick="currentSlide({{ forloop.counter }})">
-  </div>
-{% endfor %}
-
-</div> 
+</div>    
 {% endblock %}  
       
-{% block postloadjs %}
-    {{ block.super }}
-    <script src="{% static 'js/gallery.js' %}"></script>
-{% endblock %}
+
