@@ -48,9 +48,12 @@
         {% endfor %}
       </div>
     {% endif %}
-    
-    {% block content %}
-    {% endblock %}
+    <main>
+      <div id="center">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>  
 
     {% include 'includes/footer.html' %}
 

@@ -1,4 +1,9 @@
-{% extends "account/base_manage.html" %}
+{% extends "base.html" %}
+{% block header %}
+{% include 'includes/shopheader.html' %}
+{% endblock %}
+
+
 {% load allauth i18n %}
 {% block head_title %}
     {% trans "Sign Out" %}

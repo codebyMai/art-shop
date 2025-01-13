@@ -1,4 +1,7 @@
-{% extends "account/base_entrance.html" %}
+{% extends "base.html" %}
+{% block header %}
+{% include 'includes/shopheader.html' %}
+{% endblock %}
 {% load i18n %}
 {% load allauth %}
 {% block head_title %}
