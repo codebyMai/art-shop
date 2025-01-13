@@ -19,5 +19,9 @@ class ProductDetail(DetailView):
     model = Product
     template_name = 'products/detail.html'
 
+def faq(request):
+    """FAQ page view """
+    return render(request, 'products/faq.html')    
+
 
     

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+{% include 'includes/shopheader.html' %}
+{% endblock %}
+
+
+
+{% block content %}
+<main>
+    <section>
+        <h3 class="d-flex justify-content-center">FAQ</h3>
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Shipping</h5>
+            <p class="card-text">All artwork is shipped registered and insured with AnPost. 
+                Buyers are responsible for ensuring compliance with local tax obligations.</p> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Delivery Times</h5>
+            <p class="card-text">Standard delivery time is 3-5 working days for Ireland & UK,
+                 7-10 working days for other European countries, and up to 21 working days for countries 
+                outside EU. These are estimated times only.</p>
+            </div>
+        </div
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Shipping rates</h5>
+            <p class="card-text">Our standard shipping rate is 10% of the value of the purchase with purchases over €500 shipped free of charge. We endavour to use as much recycled packaging as possible while 
+                at the same time prioritizing safety of the paintings.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Returns</h5>
+            <p class="card-text">We hope you love your purchase, but if you are in any way unsatisfied, contact us via the contact form on the 
+                website with your order number as the subject.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Privacy Policy</h5>
+            <p class="card-text">Full Privacy Policy statement available below.</p>
+            <a href="https://www.termsfeed.com/live/77a26be0-0144-4680-a3b7-2b58b32af7e7" class="btn btn-light" target="_blank" rel="noopener"
+             aria-label="Full Privacy Policy">Full Privacy Policy</a>
+            </div>
+        </div>
+        
+{% endblock %}
