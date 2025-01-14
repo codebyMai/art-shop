@@ -6,6 +6,16 @@
     {% block meta %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta name="description" content="Mai Silva Art. Art portfolio of an artist and illustrator based in Ireland.">
+      <meta name="keywords" content="art, illustration, art portfolio, Mai Silva, irish art, watercolour art">
+
+      <!--favicon-->
+      <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+     
+
     {% endblock %}
 
     {% block corecss %}
@@ -52,6 +62,7 @@
     {% endif %}
     
     <main>
+      <hr>
       <div id="center">
         {% block content %}
         {% endblock %}

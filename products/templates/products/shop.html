@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %} Shop{% endblock %} 
+
 {% block header %}
 {% include 'includes/shopheader.html' %}
 {% endblock %}
 
-
-
 {% block content %}
-<div class="row justify-content-center">   
+<div class="row justify-content-center"> 
+    <h1>Original art for sale</h1>  
     <div class="col">
         <img class="shop-painting"class="img-fluid" src="{% static 'images/fastnet.webp' %}">
     </div>

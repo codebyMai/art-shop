@@ -32,6 +32,19 @@ nav {
     margin: 0px 40px;  
 }
 
+/* footer */
+
+.socials li{    
+    padding: 20px; 
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+} 
+.socials i {
+    font-size: 200%;
+    color: #434c4c;   
+}
+
 /* index */  
 .hero {
     padding-bottom: 20px ;
