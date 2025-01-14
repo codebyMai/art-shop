@@ -33,7 +33,6 @@ nav {
 }
 
 /* footer */
-
 .socials li{    
     padding: 20px; 
     display: flex;
@@ -112,6 +111,7 @@ nav {
     text-align: center;
     min-height: 80vh;
 }
+
 @media screen and (max-width: 576px) {
     .navbar-brand img {
         width: 200px

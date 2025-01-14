@@ -6,7 +6,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-if os.path.exists('env.py'):import env
+if os.path.exists('env.py'):
+    import env
 
 
 # Quick-start development settings - unsuitable for production
@@ -18,7 +19,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com',
+                 'localhost',]
 
 
 # Application definition
@@ -47,7 +49,6 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
-   
 ]
 
 MIDDLEWARE = [
