@@ -25,9 +25,11 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Maria Zawilska Art{% block title %}{% endblock %}</title>
-  </head>
+      <title>Maria Zawilska Art{% block title %}{% endblock %}</title>
+    </head>
   <body>
+    
+
     {% block header %}
     {% endblock %}
 
@@ -48,6 +50,7 @@
         {% endfor %}
       </div>
     {% endif %}
+    
     <main>
       <div id="center">
         {% block content %}
@@ -56,10 +59,21 @@
     </main>  
 
     {% include 'includes/footer.html' %}
-
+    
     {% block postloadjs %}
     <script type="text/javascript">
-      $('.toast').toast('show');
+      /* Show Toast Messages */
+      $(document).ready(function(){
+        $('.toast').show();
+      });
+
+      /* Hide toast Messages on click of close button */
+      $('.toast-close').each(function() {
+        $(this).click(function() {
+          $('.toast').hide();
+        });
+      });
+     
     </script>
     {% endblock %}
 
