@@ -59,19 +59,17 @@
         {% endfor %}
       </div>
     {% endif %}
-    
-    <main>
+  
       <hr>
       <div id="center">
         {% block content %}
         {% endblock %}
       </div>
-    </main>  
-
+    <hr>
     {% include 'includes/footer.html' %}
     
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script type="javascript">
       /* Show Toast Messages */
       $(document).ready(function(){
         $('.toast').show();
