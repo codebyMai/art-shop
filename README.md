@@ -1,7 +1,9 @@
 # Maria Zawilska Art
 
 Maria Zawilska Art is a portfolio of a contemporary artist Maria Zawilska as well as the e-commerce website where Maria can sell her original artworks. 
+
 ![Am I responsive image](readme_img/responsive.png)  
+
 
 [Click Here To Visit Live Site](https://maria-zawilska-art-68e0986b160e.herokuapp.com/)
 
@@ -130,21 +132,9 @@ PEP8 CI Python Linter
 
 
 # Deployment
-###Heroku
+### Heroku
 
 ### Stripe
-- Sign in or create an account with [Stripe](https://stripe.com/gb)
-- Click "Developers" from the menu on the left hand side and then "API keys"
-- Copy the "Publishable key" and "Secret key"
-- Add these to Heroku Config Vars as STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY respectivly.
-- Click "Webhooks" from the Developers tab and then "+ Add endpoint"
-- Enter the following as the "Endpoint URL":
-```
-https://'your-website-name'.herokuapp.com/checkout/wh/
-```
-- Select "Recieve all events" and then "Add endpoint"
-- Copy the "Signing secret"
-- Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
 ### Steps to clone project
 - Click on the code tab under the repository name.
@@ -182,4 +172,4 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 # Acknowledgments
 - I would like to thank my mentor, cohort facilitator and Code Institute.
   
-[Back to the top](#Maria Zawilska Art)
+
