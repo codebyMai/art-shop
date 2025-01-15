@@ -4,7 +4,6 @@ Maria Zawilska Art is a portfolio of a contemporary artist Maria Zawilska as wel
 ![Am I responsive image](readme_img/responsive.png)  
 
 [Click Here To Visit Live Site](https://maria-zawilska-art-68e0986b160e.herokuapp.com/)
-[Github project board](https://github.com/users/codebyMai/projects/5/views/1)
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
@@ -104,7 +103,7 @@ Colour scheme is intentionally minimal to not to detract from the artwork.
 ### Checkout page
 ### Contact page
 ### Footer
-###Admin
+### Admin
 
 # Future features
 
@@ -181,5 +180,6 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - youtube channels [@Codemycom](https://www.youtube.com/@Codemycom), @DennisIvy(https://www.youtube.com/@DennisIvy)helped me to get a better understanding of Django
 
 # Acknowledgments
-- I would like to thank my mentor, cohort facilitator and Code Institute. 
+- I would like to thank my mentor, cohort facilitator and Code Institute.
+  
 [Back to the top](#Maria Zawilska Art)
