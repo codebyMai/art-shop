@@ -9,6 +9,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 if os.path.exists('env.py'):
     import env
 
+# Cloudinary imports
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api    
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -17,10 +23,11 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com',
-                 'localhost',]
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -36,6 +43,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    
 
     # Apps
     'home',
@@ -47,6 +55,7 @@ INSTALLED_APPS = [
     'contact',
 
     # Other
+    'cloudinary',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -164,8 +173,12 @@ STATICFILES_DIRS = [
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
+# Cloudinary #
+cloudinary.config( 
+cloud_name = os.getenv('CLOUDINARY_NAME'),
+cloud_key= os.getenv('CLOUDINARY_KEY'),
+cloud_secret = os.getenv('CLOUDINARY_SECRET')
+)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -178,3 +191,4 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'mariazawilskaart@example.com'
+

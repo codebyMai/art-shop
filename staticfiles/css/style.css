@@ -10,8 +10,12 @@ nav {
     padding-bottom: 20px !important;
 }
 .btn-light {
-    padding: 5px;
-    box-shadow: 10px #888888;
+    padding: 20px 40px;
+    box-shadow: 30px #7c7d7d;
+    border: 5px #7c7d7d;
+    border-radius: 5px;
+    filter: drop-shadow(0px 2px 5px  rgba(0, 0, 0, 100));
+    margin: 10px 40px;
 }
 
 /* navbar styles */
@@ -25,20 +29,38 @@ nav {
     color: #434c4c;
     font-size: 1.3em;
     padding: .5em 5em;
-
-    margin: 0px 40px;
-    
+    margin: 0px 40px;  
 }
-/* shop */
+
+/* footer */
+.socials li{    
+    padding: 20px; 
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+} 
+.socials i {
+    font-size: 200%;
+    color: #434c4c;   
+}
+
+/* index */  
 .hero {
     padding-bottom: 20px ;
 }
+
+/* about */
+.about {
+    margin: 0 20px;
+}
+
+/* shop */
 .bag {
     color:#2d3232; 
 }
 .shop-painting {
     width: 100%;
-    padding: 0 20px 40px;
+    padding: 20px 20px 40px;
 }
 
 /* products */
@@ -49,8 +71,8 @@ nav {
     text-align: center;
     font-size: 16px;
 }
-.fa fa-eye {
-    color:#2d3232;
+.icon {
+    color:#7c7d7d;
     text-align: center;
     font-size: 120%; 
 }
@@ -70,14 +92,12 @@ nav {
 }
 
 /* toasts */
-
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
 }
-
 .custom-toast {
     overflow: visible;
 }
@@ -85,6 +105,13 @@ nav {
 .toast-capper {
     height: 2px;
 }
+
+/*all auth*/
+#center {
+    text-align: center;
+    min-height: 80vh;
+}
+
 @media screen and (max-width: 576px) {
     .navbar-brand img {
         width: 200px

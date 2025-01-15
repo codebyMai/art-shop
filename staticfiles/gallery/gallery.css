@@ -1,0 +1,13 @@
+/* reset styles */
+
+.paintings {
+    width: 100%;
+    line-height: 5px;
+    padding: 0 20px 40px;
+}
+.title {
+    text-align: center;
+    
+}
+
+
