@@ -26,8 +26,6 @@ def faq(request):
     """FAQ page view """
     return render(request, 'products/faq.html')  
 
-
-
 def add_product(request):
     """ Add a product to the store """
     if request.method == 'POST':
