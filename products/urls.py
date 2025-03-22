@@ -9,11 +9,6 @@ urlpatterns = [
     path('product/<int:pk>/', ProductDetail.as_view(), name='detail'),
     path('faq/', views.faq, name='faq'),
     path('add/', views.add_product, name='add_product'),
-<<<<<<< HEAD
-   
-   
-=======
     path('edit/<int:product_id>/', views.edit_product, name='edit_product'),
     path('delete/<int:product_id>/', views.delete_product, name='delete_product'),
->>>>>>> 194a05bfa3d3252d0447f0e4322605ed3e6fbd29
 ]
