@@ -23,7 +23,6 @@
                   <p class="card-price">€ {{product.price}}</p>
                   <div>
                       <a href="{% url 'detail' product.pk %}"class="icon" ><i class="fa fa-eye"></i></a>
-                      <a href="{% url 'view_bag' %}"class="icon" ><i class="fa-solid fa-cart-arrow-down"></i></a>
                       {% if request.user.is_superuser %}
                         <small class="ml-3">
                           <a href="{% url 'edit_product' product.id %}">Edit</a> | 
