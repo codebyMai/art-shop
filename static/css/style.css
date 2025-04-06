@@ -4,15 +4,15 @@
 /* general styles */
 body {
     font-family: 'Nunito Sans', sans-serif;;
-    color: #2d3232;
+    color: #434c4c;
 }
 nav {
     padding-bottom: 20px !important;
 }
 .btn-light {
     padding: 20px 40px;
-    box-shadow: 30px #7c7d7d;
-    border: 5px #7c7d7d;
+    box-shadow: 30px #a1a6a6;
+    border: 5px #a1a6a6;
     border-radius: 5px;
     filter: drop-shadow(0px 2px 5px  rgba(0, 0, 0, 100));
     margin: 10px 40px;
@@ -43,6 +43,12 @@ nav {
     font-size: 200%;
     color: #434c4c;   
 }
+#mc_embed_signup{
+    background:#fff;
+    clear:left; 
+    font:14px, 'Nunito Sans',sans-serif; 
+    width: auto;
+}
 
 /* index */  
 .hero {
@@ -56,7 +62,7 @@ nav {
 
 /* shop */
 .bag {
-    color:#2d3232; 
+    color:#434c4c; 
 }
 .shop-painting {
     width: 100%;
@@ -72,7 +78,7 @@ nav {
     font-size: 16px;
 }
 .icon {
-    color:#7c7d7d;
+    color:#a1a6a6;
     text-align: center;
     font-size: 120%; 
 }
@@ -85,7 +91,7 @@ nav {
     font-weight: bold;
 }
 .fa-shopping-bag {
-    color:#2d3232;
+    color:#434c4c;
     text-align: center;
     padding-right: 30px;
     font-size: 120%;
@@ -119,7 +125,7 @@ nav {
 }
 @media screen and (min-width: 992px) {
     .navbar-brand {
-        border-bottom: 2px solid #2d3232;
+        border-bottom: 2px solid #434c4c;
     }
 }
 @media screen and (min-width: 992px) {
