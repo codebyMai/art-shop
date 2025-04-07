@@ -8,7 +8,12 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Thank you {user.name} for contacting us.')
+            return redirect('contact_success')
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})
+
+
+def contact_success(request):
+    """success message view"""
+    return render(request, 'contact/contact_success.html')
