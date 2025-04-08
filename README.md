@@ -407,12 +407,16 @@ As a site owner I want to be able to add, update and delete products directly fr
 <details><summary>Bag</summary>
 <img src="readme_img/bag_valid.png">
 </details>
+
 - artworks are still visible after purchase and can be added to the bag by another customer - to amend this a future iteration will introduce a 'sold' label to sold artworks and quantity is going to be limited to one;
+
 - MailChimp logo placement on smaller devices is not ideal;
+
 - Despite many attempts I didn't manage to figure out what causes failure of payment.intent.succedded and confirmation emails. Out of the 4 events one continuously fails while three remaining succeed:
 <details><summary>Stripe</summary>
 <img src="readme_img/stripe.png">
 </details>
+
 - attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form 
 
 # Deployment
@@ -466,4 +470,4 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 
 # Acknowledgments
 - I would like to thank my mentor, cohort facilitator and Code Institute. 
-[Back to the top](# Maria Zawilska Art)
+
