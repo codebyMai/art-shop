@@ -17,12 +17,12 @@
         {% for product in products %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
               <div class="card product-cards" >
-                <img class="card-img-top" src={{product.image.url}}>
+                <img class="card-img-top" src={{product.image.url}} alt="{{product.image_alt}}">
                 <div class="card-body">
                   <p class="card-title">{{product.title}}</p>   
                   <p class="card-price">€ {{product.price}}</p>
                   <div>
-                      <a href="{% url 'detail' product.pk %}"class="icon" ><i class="fa fa-eye"></i></a>
+                      <a href="{% url 'detail' product.pk %}" class="icon" ><i class="fa fa-eye"></i></a>
                       {% if request.user.is_superuser %}
                         <small class="ml-3">
                           <a href="{% url 'edit_product' product.id %}">Edit</a> | 

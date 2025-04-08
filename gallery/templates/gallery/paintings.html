@@ -16,7 +16,7 @@
     {% for painting in gallery %}
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="gallery" >
-          <img class="col-md-auto paintings" src={{painting.image.url}}>
+          <img class="col-md-auto paintings" src={{painting.image.url}} alt="{{painting.alt_image}}">
         </div>  
           <div class="justify-content-center title"><p >{{painting.title}} {{painting.year}}</p></div>    
       </div>  

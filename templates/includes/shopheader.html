@@ -24,8 +24,7 @@
           <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
           <a class="nav-link" href="{% url 'account_login' %}">Login</a>
       {% endif %}
-      <li class="list-inline-item">
-          <a class="nav-link" href="{% url 'view_bag' %}">
+          <a class="nav-link list-inline-item" href="{% url 'view_bag' %}">
               <div><i class="fas fa-shopping-bag fa-lg bag"></i></div>
               <p class="my-0">
                   {% if grand_total %}
@@ -35,7 +34,7 @@
                   {% endif %}
               </p>
           </a>  
-      </li>
+      
         </div>
       </div>
     </div>  
