@@ -143,7 +143,6 @@ There is two distinct sections of the website with their separate navigation men
 <details><summary>Shop</summary>
 <img src="readme_img/nav2.png">
 </details>
-
 - on medium and small screens the navigation menu changes to the burger menu which shows all the nav links when clicked on
 - superuser gets access to an additional tab displayed in the navigation menu: 'admin', which allows adding a product directly from the website without using the admin panel
 
@@ -161,9 +160,9 @@ Introduces user to two distinct categories of Maria's artwork.
 
 ### Product page
 Showcases available artworks including image, title and price.
-- eye icon leads to detailed view of the artwork
+- eye icon leads to detailed view of the artwork. Superuser has access to here to editing and deleting products.
 <details><summary>Products</summary>
-<img src="readme_img/product.png">
+<img src="readme_img/product_admin.png">
 </details>
 
 ### Product detail page
@@ -189,7 +188,7 @@ Listing products added to the bag including image, title and price.
 </details>
 
 ### Footer
-Contains social media links, contact and subscription link.
+Contains social media links ( linking to main pages as Maria does not have the accounts yet), contact and subscription link.
 <details><summary>Footer</summary>
 <img src="readme_img/footer.png">
 </details>
@@ -224,8 +223,7 @@ Introduces user to the artist.
 # Future features
 - ability to sort products by size, miniatures vs. larger artworks;
 - changing featured artworks by ticking 'is_featured' option;
-- sold artwork images labeled sold so the store does not appear empty until next restock and 
-- 
+- sold artwork images labeled 'sold' to emphasize the scarcity of the product;
 
 
 # Technologies used
@@ -292,7 +290,7 @@ The W3C Markup Validation Service
 Jigsaw CSS validator 
 
 <details><summary>General CSS</summary>
-<img src="readme_img/css.png">
+<img src="readme_img/css_valid.png">
 </details>
 <details><summary>Profile CSS</summary>
 <img src="readme_img/profile_css.png">
@@ -333,7 +331,7 @@ PEP8 CI Python Linter
 <img src="readme_img/product_form.png">
 </details>
 <details><summary>Profile model</summary>
-<img src="readme_img/profile_model.png">
+<img src="readme_img/profiles_model.png">
 </details>
 <details><summary>Profile views</summary>
 <img src="readme_img/profile_views.png">
@@ -355,23 +353,12 @@ Click 'secure checkout'|  Redirected to checkout page | &check;
 Fill in all the details |  No errors displayed on the form | &check;
 In payment section input 42 and repeat all the way to the end & click complete order | Payment went through, preview of purchase is displayed | &check;
 
-Check email |  Email comfirmation has been sent | &check;
-<details><summary>Order comfirmation</summary>
-<img src="readme_img/screenshots/order_comformation.png">
-</details>
-<details><summary>Stripe</summary>
-<img src="readme_img/screenshots/stripe.png">
-</details>
-<details><summary>Email comformation</summary>
-<img src="readme_img/screenshots/email_comfirmation.png">
-</details>
 
 ## Testing user stories
 
 User Story |  Test | Pass
 --- | --- | :---:
 As a site visitor, I want be able to register to be able to track my purchases | Register button in the navigation menu allows user to create an account| &check;
-<details><summary>Navbar</summary>
 
 User Story |  Test | Pass
 --- | --- | :---:
@@ -416,20 +403,19 @@ As a site owner I want to be able to add, update and delete products directly fr
 
 # Bugs
 ## Remaining bugs
-- Shopping bag validation throws errors in relation to stray and unclosed <form> and <td> elements which I investigated but failed to find a solution for within allocated time frame.
+- shopping bag validation throws errors in relation to stray and unclosed <form> and <td> elements which I investigated but failed to find a solution for within allocated time frame
 <details><summary>Bag</summary>
 <img src="readme_img/bag_valid.png">
 </details>
-- Artworks are still visible after purchase and can be added to the bag by another customer - to amend this a future iteration will introduce a 'sold' label to sold artworks and quantity is going to be limited to one.
-- MailChimp logo placement on smaller devices is not ideal.
+- artworks are still visible after purchase and can be added to the bag by another customer - to amend this a future iteration will introduce a 'sold' label to sold artworks and quantity is going to be limited to one;
+- MailChimp logo placement on smaller devices is not ideal;
 - Despite many attempts I didn't manage to figure out what causes failure of payment.intent.succedded and confirmation emails. Out of the 4 events one continuously fails while three remaining succeed:
 <details><summary>Stripe</summary>
 <img src="readme_img/stripe.png">
 </details>
-- Attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form. Time constraints prevented me from investigating the issue further. 
+- attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form 
 
 # Deployment
-###Heroku
 
 ### Stripe
 - Sign in or create an account with [Stripe](https://stripe.com/gb)
