@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MinValueValidator 
+from decimal import Decimal
 from cloudinary.models import CloudinaryField
 
 
@@ -6,11 +8,11 @@ class Product(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
     description = models.TextField()
-    width = models.IntegerField()
-    height = models.IntegerField()
+    width = models.IntegerField(validators=[MinValueValidator(1)])
+    height = models.IntegerField(validators=[MinValueValidator(1)])
     image = models.ImageField(upload_to='static/images', null=True)
     image_alt = models.CharField(max_length=100, null=False, blank=False)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     SUBJECT_CHOICES = (
         ('La', 'Landscape'),
         ('Se', 'Seascape'),
