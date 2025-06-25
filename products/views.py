@@ -3,6 +3,7 @@ from .models import Product
 from .forms import ProductForm
 from django.contrib import messages
 from django.views.generic import (ListView, DetailView)
+from django.contrib.auth.decorators import login_required
 
 class Shop(ListView):
     """Main Shop page"""
@@ -25,6 +26,7 @@ def faq(request):
     """FAQ page view """
     return render(request, 'products/faq.html')  
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if request.method == 'POST':
@@ -45,6 +47,7 @@ def add_product(request):
 
     return render(request, template, context)
 
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     product = get_object_or_404(Product, pk=product_id)

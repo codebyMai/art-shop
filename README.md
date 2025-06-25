@@ -403,6 +403,7 @@ As a site owner I want to be able to add, update and delete products directly fr
 
 # Bugs
 ## Remaining bugs
+- products/models.py throws  syntax error despite succesfully passing through linter
 - shopping bag validation throws errors in relation to stray and unclosed <form> and <td> elements which I investigated but failed to find a solution for within allocated time frame
 <details><summary>Bag</summary>
 <img src="readme_img/bag_valid.png">

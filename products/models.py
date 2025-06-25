@@ -3,18 +3,15 @@ from django.core.validators import MinValueValidator
 from decimal import Decimal
 from cloudinary.models import CloudinaryField
 
-
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
     description = models.TextField()
-    width = models.IntegerField(validators=[MinValueValidator(1)])
-    height = models.IntegerField(validators=[MinValueValidator(1)])
+    width = models.PositiveIntegerField(default=1)
+    height = models.PositiveIntegerField(default=1)
     image = models.ImageField(upload_to='static/images', null=True)
     image_alt = models.CharField(max_length=100, null=False, blank=False)
-    price = models.
-    DecimalField(max_digits=6, decimal_places=2,
-                 validators=[MinValueValidator(Decimal('0.01'))])
+    price = models.PositiveIntegerField(default=1)
     SUBJECT_CHOICES = (
         ('La', 'Landscape'),
         ('Se', 'Seascape'),
