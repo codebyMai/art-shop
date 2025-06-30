@@ -422,6 +422,62 @@ As a site owner I want to be able to add, update and delete products directly fr
 
 # Deployment
 
+### Create PostgreSQL database
+
+- Navigate to PostgreSQL from Code Institute.
+- Enter your email address used to sign it to LMS in the input field provided and click Submit.
+- Your database is successfully created. 
+- Review the email sent to your email inbox.
+
+### Create an app on Heroku
+
+Sign in or create an account with [Heroku](https://www.heroku.com/)
+- In the Heroku dashboard use the New tab to create a new app.
+- Name the app and choose a region.
+- Click on the settings tab and select "Reveal Congig Vars".
+- Add DATABASE_URL with the value of the database URL copied from postgresql
+- Enter the following command in to your terminal to install dj_database and psycopg2. These are needed to connect to the database:
+```pip3 install dj_database_url==0.5.0 psycopg2```
+followed by ```pip freeze > requirements.txt``` to update requirements.txt.
+Add ``` import dj_database_url``` below import os in settings.py
+- In the DATABASES section of the settings comment out the initial settings and place the following underneath:
+```
+DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
+ }
+```
+- Migrate the models to the database using
+```
+ python manage.py migrate
+```
+- Create a superuser and supply a username and password:
+```
+ python3 manage.py createsuperuser
+```
+- Install [Gunicorn](https://gunicorn.org/) webserver:
+```
+pip3 install gunicorn
+```
+- Create a file named Procfile in the root of the project and add:
+```
+web: gunicorn 'name-of-your-project'.wsgi:application
+```
+- Add the required dependencies with:
+```
+pip3 feeze > requirements
+```
+- Add the following to settings:
+```
+ALLOWED_HOSTS = ["'name-of-the-website'.herokuapp.com", "localhost"]
+```
+- Add changes, commit and push to GitHub and Heroku
+```
+git add . 
+git commit -m "Deployment"
+git push
+git push heroku main
+```
+
 ### Stripe
 - Sign in or create an account with [Stripe](https://stripe.com/gb)
 - Click "Developers" from the menu on the left hand side and then "API keys"

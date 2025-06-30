@@ -2,7 +2,8 @@
 {% block header %}
 {% include 'includes/shopheader.html' %}
 {% endblock %}
-{% load allauth i18n %}
+{% load i18n %}
+{% load allauth account %}
 {% block head_title %}
     {% trans "Signup" %}
 {% endblock head_title %}
