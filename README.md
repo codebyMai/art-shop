@@ -1,9 +1,12 @@
 # Maria Zawilska Art
 
 Maria Zawilska Art is a portfolio of a contemporary artist Maria Zawilska as well as the e-commerce website where Maria can sell her original artworks. 
+
 ![Am I responsive image](readme_img/responsive.png)  
 
+
 [Click Here To Visit Live Site](https://maria-zawilska-art-68e0986b160e.herokuapp.com/)
+
 [Github project board](https://github.com/users/codebyMai/projects/5/views/1)
 
 ## Table Of Contents:
@@ -17,6 +20,7 @@ Maria Zawilska Art is a portfolio of a contemporary artist Maria Zawilska as wel
     * [Agile Methodology](#agile-methodology)
     * [Logo](#logo)
     * [Color Scheme](#color-scheme)
+    * [Font](#font)
    
 2. [Features](#features)
 3. [Future features](#future-features)
@@ -131,7 +135,7 @@ I have designed the logo in [Canva](https://www.canva.com/) giving it a painterl
 Colour scheme is intentionally neutral and minimal to not to detract from the artwork.
 ![Colour Scheme](readme_img/colors.png)
 
-### Fonts
+### Font
 Nunito Sans font from Google Fonts was chosen for its modern, clean look.
 
 # Features
@@ -320,6 +324,9 @@ PEP8 CI Python Linter
 <details><summary>Checkout views</summary>
 <img src="readme_img/checkout_views.png">
 </details>
+<details><summary>Checkout urls</summary>
+<img src="readme_img/checkout_urls.png">
+</details>
 <details><summary>Contact views</summary>
 <img src="readme_img/contact_views.png">
 </details>
@@ -340,6 +347,9 @@ PEP8 CI Python Linter
 </details>
 <details><summary>Context</summary>
 <img src="readme_img/context.png">
+</details>
+<details><summary>Settings</summary>
+<img src="readme_img/settings.png">
 </details>
 
 ## Testing purchase 
@@ -417,6 +427,8 @@ As a site owner I want to be able to add, update and delete products directly fr
 <img src="readme_img/bag_valid.png">
 </details>
 
+- line 51 in checkout models is too long according to validator but attempts at dividing it crash the site
+
 - artworks are still visible after purchase and can be added to the bag by another customer - to amend this a future iteration will introduce a 'sold' label to sold artworks and quantity is going to be limited to one;
 
 - MailChimp logo placement on smaller devices is not ideal;
@@ -429,28 +441,26 @@ As a site owner I want to be able to add, update and delete products directly fr
 - attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form 
 
 - It has been suggested by the assessor of the project that phone number and postal code in the profile form should be validated. I have looked into the issue but it turned out to be a very complex problem due to planned global reach of the website and lack of standarization of postal codes and phone numbers among the countries. From personal experience I have found that websites validating only the most common formats and rejecting for example Irish Eircode are very offputting from the users point of view. Weighing the complexity of the issue and possible drawbacks I have decided to follow the example presented in the Boutique Ado walkthrough and keep those as Charfields.
-[International zip code validation](https://www.geopostcodes.com/blog/international-zip-code-validation/)
-[Zip code validation](https://www.geopostcodes.com/blog/how-to-use-python-to-validate-zip-codes-a-step-by-step-guide/)
-[Validating phone numbers](https://stackabuse.com/validating-and-formatting-phone-numbers-in-python/)
+-[International zip code validation](https://www.geopostcodes.com/blog/international-zip-code-validation/)
+-[Zip code validation](https://www.geopostcodes.com/blog/how-to-use-python-to-validate-zip-codes-a-step-by-step-guide/)
+-[Validating phone numbers](https://stackabuse.com/validating-and-formatting-phone-numbers-in-python/)
 
 # Deployment
 
 ### Create PostgreSQL database
-
 - Navigate to PostgreSQL from Code Institute.
 - Enter your email address used to sign it to LMS in the input field provided and click Submit.
 - Your database is successfully created. 
 - Review the email sent to your email inbox.
 
 ### Create an app on Heroku
-
-Sign in or create an account with [Heroku](https://www.heroku.com/)
+- Sign in or create an account with [Heroku](https://www.heroku.com/)
 - In the Heroku dashboard use the New tab to create a new app.
 - Name the app and choose a region.
 - Click on the settings tab and select "Reveal Congig Vars".
 - Add DATABASE_URL with the value of the database URL copied from postgresql
 - Enter the following command in to your terminal to install dj_database and psycopg2. These are needed to connect to the database:
-```pip3 install dj_database_url==0.5.0 psycopg2```
+```pip install dj_database_url~=0.5.0 psycopg2-binary~=2.9```
 followed by ```pip freeze > requirements.txt``` to update requirements.txt.
 Add ``` import dj_database_url``` below import os in settings.py
 - In the DATABASES section of the settings comment out the initial settings and place the following underneath:
@@ -465,11 +475,11 @@ DATABASES = {
 ```
 - Create a superuser and supply a username and password:
 ```
- python3 manage.py createsuperuser
+ python manage.py createsuperuser
 ```
 - Install [Gunicorn](https://gunicorn.org/) webserver:
 ```
-pip3 install gunicorn
+pip install gunicorn
 ```
 - Create a file named Procfile in the root of the project and add:
 ```
@@ -477,7 +487,7 @@ web: gunicorn 'name-of-your-project'.wsgi:application
 ```
 - Add the required dependencies with:
 ```
-pip3 feeze > requirements
+pip feeze > requirements
 ```
 - Add the following to settings:
 ```
