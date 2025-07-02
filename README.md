@@ -131,6 +131,8 @@ I have designed the logo in [Canva](https://www.canva.com/) giving it a painterl
 Colour scheme is intentionally neutral and minimal to not to detract from the artwork.
 ![Colour Scheme](readme_img/colors.png)
 
+### Fonts
+Nunito Sans font from Google Fonts was chosen for its modern, clean look.
 
 # Features
 
@@ -232,8 +234,7 @@ Introduces user to the artist.
 - [Django](https://www.djangoproject.com/) 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), 
 - [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [Gitpod](https://www.gitpod.io/about) 
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) 
 - [Heroku](https://en.wikipedia.org/wiki/Heroku)
 - [Github](https://en.wikipedia.org/wiki/GitHub) 
 - [Git](https://en.wikipedia.org/wiki/Git)
@@ -244,7 +245,8 @@ Introduces user to the artist.
 - [Am I Responsive?](http://ami.responsivedesign.is) 
 - [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 - [JSHint](https://jshint.com/) 
-- [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) 
+- [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+- [Canva](https://www.canva.com/) 
 
 
 # Testing
@@ -403,7 +405,13 @@ As a site owner I want to be able to add, update and delete products directly fr
 
 # Bugs
 ## Remaining bugs
+- line 137 in settings is 80 characters long but attempts at splitting it in any way resulted in django validation refusing to work
+
 - products/models.py throws  syntax error despite succesfully passing through linter
+<details><summary>Products Model</summary>
+<img src="readme_img/products_model.png">
+</details>
+
 - shopping bag validation throws errors in relation to stray and unclosed <form> and <td> elements which I investigated but failed to find a solution for within allocated time frame
 <details><summary>Bag</summary>
 <img src="readme_img/bag_valid.png">
@@ -419,6 +427,11 @@ As a site owner I want to be able to add, update and delete products directly fr
 </details>
 
 - attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form 
+
+- It has been suggested by the assessor of the project that phone number and postal code in the profile form should be validated. I have looked into the issue but it turned out to be a very complex problem due to planned global reach of the website and lack of standarization of postal codes and phone numbers among the countries. From personal experience I have found that websites validating only the most common formats and rejecting for example Irish Eircode are very offputting from the users point of view. Weighing the complexity of the issue and possible drawbacks I have decided to follow the example presented in the Boutique Ado walkthrough and keep those as Charfields.
+[International zip code validation](https://www.geopostcodes.com/blog/international-zip-code-validation/)
+[Zip code validation](https://www.geopostcodes.com/blog/how-to-use-python-to-validate-zip-codes-a-step-by-step-guide/)
+[Validating phone numbers](https://stackabuse.com/validating-and-formatting-phone-numbers-in-python/)
 
 # Deployment
 
@@ -524,6 +537,8 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - @Richard Ash for publishing on Slack his custom solution to uncooperative toast messages in Bootstrap5
 - https://www.contemporaryartissue.com/how-to-create-a-professional-artist-website/ https://artprof.org/pro-development/how-to-create-an-artist-website/
 - youtube channels [@Codemycom](https://www.youtube.com/@Codemycom), [@DennisIvy](https://www.youtube.com/@DennisIvy)helped me to get a better understanding of Django
+- [Google Fonts](https://fonts.google.com/)
+- [Coolors](https://coolors.co/)
 
 # Acknowledgments
 - I would like to thank my mentor, cohort facilitator and Code Institute. 
