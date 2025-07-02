@@ -440,10 +440,10 @@ As a site owner I want to be able to add, update and delete products directly fr
 
 - attempts to fix error of hidden labels in the checkout, which HTML validation revealed, resulted in 2 unwanted visible input boxes appearing under the form 
 
-- It has been suggested by the assessor of the project that phone number and postal code in the profile form should be validated. I have looked into the issue but it turned out to be a very complex problem due to planned global reach of the website and lack of standarization of postal codes and phone numbers among the countries. From personal experience I have found that websites validating only the most common formats and rejecting for example Irish Eircode are very offputting from the users point of view. Weighing the complexity of the issue and possible drawbacks I have decided to follow the example presented in the Boutique Ado walkthrough and keep those as Charfields.
--[International zip code validation](https://www.geopostcodes.com/blog/international-zip-code-validation/)
--[Zip code validation](https://www.geopostcodes.com/blog/how-to-use-python-to-validate-zip-codes-a-step-by-step-guide/)
--[Validating phone numbers](https://stackabuse.com/validating-and-formatting-phone-numbers-in-python/)
+- It has been suggested by the assessor of the project that phone number and postal code in the profile form should be validated. I have looked into the issue but it turned out to be a very complex problem due to planned global reach of the website and lack of standarization of postal codes and phone numbers among the countries. From personal experience I have found that websites validating only the most common formats and rejecting for example Irish Eircode are very offputting from the users point of view. Weighing the complexity of the issue and possible drawbacks I have decided to follow the example presented in the Boutique Ado walkthrough and keep those as CharFields.
+- [International zip code validation](https://www.geopostcodes.com/blog/international-zip-code-validation/)
+- [Zip code validation](https://www.geopostcodes.com/blog/how-to-use-python-to-validate-zip-codes-a-step-by-step-guide/)
+- [Validating phone numbers](https://stackabuse.com/validating-and-formatting-phone-numbers-in-python/)
 
 # Deployment
 
